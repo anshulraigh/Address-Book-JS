@@ -5,12 +5,12 @@ const addressBook = new AddressBook();
 
 try {
     const contact1 = new Contact(
-        "Anshul", "Rai", "Bhopal", "India", "In", "100001", "9876543210", "anshulrai077@gmail.com"
+        "Anshul", "Rai", "Bhopal", "India", "In", "100001", "9407025692", "anshulrai077@gmail.com"
     );
     console.log(addressBook.addContact(contact1)); 
 
     const contact2 = new Contact(
-        "Ram", "Rai", "Bhopal", "India","In","1000000","9197979988","ramrai395@gmail.com"
+        "Ram", "Rai", "Bhopal", "India","In","1000000","7489293544","ramrai395@gmail.com"
     )
     console.log(addressBook.addContact(contact2)); 
     console.log("All Contacts Before editing", addressBook.getAllContacts());
@@ -18,7 +18,12 @@ try {
     console.log("All Contacts After editing", addressBook.getAllContacts());
     console.log(addressBook.deleteContact("Ram"));
     console.log("All Contacts After Deleting:", addressBook.getAllContacts());
-    console.log("Total Contacts:", addressBook.countContacts());
+    console.log("Total Contacts:", addressBook.countContacts()); 
+
+    const duplicateContact = new Contact(
+        "Anshul", "Rai", "Bhopal", "India", "In", "100001", "9407025692", "anshulrai077@gmail.com"
+    );
+    console.log(addressBook.addContact(duplicateContact)); 
 } catch (error) {
     console.error("Error:", error.message);
 }
