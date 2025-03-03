@@ -23,7 +23,11 @@ try {
     const duplicateContact = new Contact(
         "Anshul", "Rai", "Bhopal", "India", "In", "100001", "9407025692", "anshulrai077@gmail.com"
     );
-    console.log(addressBook.addContact(duplicateContact)); 
+    console.log(addressBook.addContact(duplicateContact));  
+
+    console.log("Contacts in India:");
+    console.log(addressBook.searchByCityOrState("India"));
+
 } catch (error) {
     console.error("Error:", error.message);
 }
